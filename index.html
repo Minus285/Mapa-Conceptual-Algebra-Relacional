@@ -1,0 +1,141 @@
+<svg viewBox="0 0 1800 1400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .box { stroke: #333; stroke-width: 2.5; rx: 15; }
+      .box-orange { fill: #FFB84D; }
+      .box-green { fill: #B8E986; }
+      .box-beige { fill: #F5E6D3; }
+      .box-red { fill: #FFB3BA; }
+      .box-blue { fill: #BAE1FF; }
+      .box-pink { fill: #FFD4E5; }
+      .box-purple { fill: #E0BBE4; }
+      .box-center { fill: #D4C5F9; }
+      .title { font-size: 22px; font-weight: bold; font-family: Arial, sans-serif; fill: #000; }
+      .text { font-size: 14px; font-family: Arial, sans-serif; fill: #333; }
+      .connector { stroke: #666; stroke-width: 3; fill: none; }
+    </style>
+  </defs>
+
+  <!-- Fondo blanco -->
+  <rect width="1800" height="1400" fill="#ffffff"/>
+
+  <!-- CAJA CENTRAL -->
+  <rect x="650" y="600" width="500" height="100" class="box box-center"/>
+  <text x="900" y="640" text-anchor="middle" class="title">ÁLGEBRA RELACIONAL</text>
+  <text x="900" y="670" text-anchor="middle" class="text">Lenguaje procedimental para consulta de</text>
+  <text x="900" y="690" text-anchor="middle" class="text">Bases de Datos Relacionales</text>
+
+  <!-- Conectores desde el centro -->
+  <line x1="780" y1="600" x2="350" y2="250" class="connector"/>
+  <line x1="900" y1="600" x2="900" y2="250" class="connector"/>
+  <line x1="1020" y1="600" x2="1450" y2="250" class="connector"/>
+  
+  <line x1="780" y1="700" x2="350" y2="1050" class="connector"/>
+  <line x1="900" y1="700" x2="900" y2="1050" class="connector"/>
+  <line x1="1020" y1="700" x2="1450" y2="1050" class="connector"/>
+
+  <!-- CAJA 1: SELECCIÓN (Superior Izquierda) -->
+  <rect x="80" y="80" width="540" height="170" class="box box-orange"/>
+  <text x="350" y="120" text-anchor="middle" class="title">SELECCIÓN σ</text>
+  <text x="120" y="155" class="text">• Operador: Unario (1 Relación)</text>
+  <text x="120" y="180" class="text">• Función: Filtra filas (tuplas) que cumplen un</text>
+  <text x="120" y="200" class="text">  predicado (condición)</text>
+  <text x="120" y="225" class="text">• Tipo: Operador Fundamental</text>
+
+  <!-- CAJA 2: PROYECCIÓN (Superior Centro) -->
+  <rect x="680" y="80" width="440" height="170" class="box box-green"/>
+  <text x="900" y="120" text-anchor="middle" class="title">PROYECCIÓN π</text>
+  <text x="720" y="155" class="text">• Operador: Unario (1 Relación)</text>
+  <text x="720" y="180" class="text">• Función: Filtra columnas (atributos),</text>
+  <text x="720" y="200" class="text">  eliminando duplicados</text>
+  <text x="720" y="225" class="text">• Tipo: Operador Fundamental</text>
+
+  <!-- CAJA 3: PRODUCTO CARTESIANO (Superior Derecha) -->
+  <rect x="1180" y="80" width="540" height="170" class="box box-beige"/>
+  <text x="1450" y="120" text-anchor="middle" class="title">PRODUCTO CARTESIANO ×</text>
+  <text x="1220" y="155" class="text">• Operador: Binario (2 Relaciones)</text>
+  <text x="1220" y="180" class="text">• Función: Combina cada fila de R1 con cada</text>
+  <text x="1220" y="200" class="text">  fila de R2. Es la base del Join</text>
+  <text x="1220" y="225" class="text">• Tipo: Operador Fundamental</text>
+
+  <!-- CAJA 4: UNIÓN (Inferior Izquierda) -->
+  <rect x="80" y="880" width="540" height="170" class="box box-red"/>
+  <text x="350" y="920" text-anchor="middle" class="title">UNIÓN ∪</text>
+  <text x="120" y="955" class="text">• Operador: Binario (2 Relaciones)</text>
+  <text x="120" y="980" class="text">• Función: Combina todas las filas de R1 y R2.</text>
+  <text x="120" y="1000" class="text">  Requiere esquemas compatibles</text>
+  <text x="120" y="1025" class="text">• Tipo: Operador Fundamental</text>
+
+  <!-- CAJA 5: INTERSECCIÓN (Inferior Centro Izq) -->
+  <rect x="680" y="880" width="440" height="170" class="box box-blue"/>
+  <text x="900" y="920" text-anchor="middle" class="title">INTERSECCIÓN ∩</text>
+  <text x="720" y="955" class="text">• Operador: Binario (2 Relaciones)</text>
+  <text x="720" y="980" class="text">• Función: Devuelve filas presentes</text>
+  <text x="720" y="1000" class="text">  en ambas R1 y R2</text>
+  <text x="720" y="1025" class="text">• Tipo: Operador Fundamental</text>
+
+  <!-- CAJA 6: DIFERENCIA (Inferior Derecha) -->
+  <rect x="1180" y="880" width="540" height="170" class="box box-pink"/>
+  <text x="1450" y="920" text-anchor="middle" class="title">DIFERENCIA −</text>
+  <text x="1220" y="955" class="text">• Operador: Binario (2 Relaciones)</text>
+  <text x="1220" y="980" class="text">• Función: Devuelve filas en R1 que no están</text>
+  <text x="1220" y="1000" class="text">  en R2. Requiere esquemas compatibles</text>
+  <text x="1220" y="1025" class="text">• Tipo: Operador Fundamental</text>
+
+  <!-- CAJA 7: JOIN (Izquierda Centro Inferior) -->
+  <rect x="80" y="400" width="400" height="150" class="box box-purple"/>
+  <text x="280" y="440" text-anchor="middle" class="title">JOIN ⋈</text>
+  <text x="120" y="475" class="text">• Operador: Binario</text>
+  <text x="120" y="500" class="text">• Combina filas de R1 y R2</text>
+  <text x="120" y="520" class="text">  basándose en condición</text>
+
+  <!-- CAJA 8: DIVISIÓN (Derecha Centro Inferior) -->
+  <rect x="1320" y="400" width="400" height="150" class="box box-purple"/>
+  <text x="1520" y="440" text-anchor="middle" class="title">DIVISIÓN ÷</text>
+  <text x="1360" y="475" class="text">• Operador: Binario</text>
+  <text x="1360" y="500" class="text">• Devuelve tuplas de R1</text>
+  <text x="1360" y="520" class="text">  relacionadas con todas R2</text>
+
+  <!-- Líneas adicionales para Join y División -->
+  <line x1="480" y1="475" x2="650" y2="630" class="connector"/>
+  <line x1="1320" y1="475" x2="1150" y2="630" class="connector"/>
+
+  <!-- SECCIÓN OPERADORES EXTENDIDOS -->
+  <rect x="500" y="1150" width="800" height="60" fill="#E8F5E9" stroke="#333" stroke-width: 2.5; rx="12"/>
+  <text x="900" y="1190" text-anchor="middle" style="font-size: 20px; font-weight: bold; fill: #2E7D32;">OPERADORES EXTENDIDOS</text>
+
+  <!-- RENOMBRAR -->
+  <rect x="100" y="1240" width="340" height="120" class="box" fill="#FFE0B2"/>
+  <text x="270" y="1275" text-anchor="middle" class="title">RENOMBRAR ρ</text>
+  <text x="130" y="1305" class="text">• Cambia nombre de relación</text>
+  <text x="130" y="1325" class="text">  o atributos</text>
+  <text x="130" y="1345" class="text" font-style="italic">• SQL: Cláusula AS</text>
+
+  <!-- ASIGNACIÓN -->
+  <rect x="470" y="1240" width="340" height="120" class="box" fill="#F8BBD0"/>
+  <text x="640" y="1275" text-anchor="middle" class="title">ASIGNACIÓN ←</text>
+  <text x="500" y="1305" class="text">• Guarda resultado para</text>
+  <text x="500" y="1325" class="text">  uso posterior</text>
+  <text x="500" y="1345" class="text" font-style="italic">• SQL: Views o temp tables</text>
+
+  <!-- AGREGACIÓN -->
+  <rect x="840" y="1240" width="380" height="120" class="box" fill="#C5CAE9"/>
+  <text x="1030" y="1275" text-anchor="middle" class="title">AGREGACIÓN 𝒢</text>
+  <text x="870" y="1305" class="text">• SUM, AVG, COUNT, MIN, MAX</text>
+  <text x="870" y="1325" class="text">  sobre grupos de tuplas</text>
+  <text x="870" y="1345" class="text" font-style="italic">• SQL: GROUP BY</text>
+
+  <!-- OUTER JOIN -->
+  <rect x="1250" y="1240" width="380" height="120" class="box" fill="#D1C4E9"/>
+  <text x="1440" y="1275" text-anchor="middle" class="title">OUTER JOIN ⟕</text>
+  <text x="1280" y="1305" class="text">• Incluye filas sin coincidencia</text>
+  <text x="1280" y="1325" class="text">  (Left, Right, Full)</text>
+  <text x="1280" y="1345" class="text" font-style="italic">• SQL: LEFT/RIGHT/FULL JOIN</text>
+
+  <!-- Conectores a operadores extendidos -->
+  <line x1="270" y1="1240" x2="850" y2="1150" class="connector"/>
+  <line x1="640" y1="1240" x2="870" y2="1150" class="connector"/>
+  <line x1="1030" y1="1240" x2="930" y2="1150" class="connector"/>
+  <line x1="1440" y1="1240" x2="950" y2="1150" class="connector"/>
+
+</svg>
